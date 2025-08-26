@@ -1,4 +1,3 @@
 # SkillFactoryJS
-Repository for homework 
-Start from module 36
+Module 38 homework
 
