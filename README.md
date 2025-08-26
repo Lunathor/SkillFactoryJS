@@ -1,2 +1,4 @@
 # SkillFactoryJS
-module homework init on module 37
+Repository for homework
+Start from module 36
+
