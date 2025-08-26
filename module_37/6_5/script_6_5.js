@@ -1,0 +1,21 @@
+// Исходный объект
+const obj = {
+    some: 'some',
+    dom: 'text',
+    arr: [1, 2, 3, 4, 5],
+    tom: 'there'
+};
+
+console.log("=== Исходный объект ===");
+console.log(obj);
+
+const arrValues = [];
+for (let key in obj) {
+    if (Array.isArray(obj[key])) {
+        arrValues.push(...obj[key]);
+    } else {
+        arrValues.push(obj[key]);
+    }
+}
+console.log(arrValues);
+
