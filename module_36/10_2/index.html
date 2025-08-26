@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест проверки промокода</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .info {
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #2196F3;
+        }
+        .examples {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #ffc107;
+        }
+        .examples ul {
+            text-align: left;
+            margin: 10px 0;
+        }
+        .examples li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Тест проверки промокода</h1>
+        <p>Этот HTML файл загружает ваш JavaScript скрипт для проверки промокода.</p>
+        
+        <div class="info">
+            <p><strong>Что произойдет:</strong></p>
+            <p>1. Появится окно prompt() для ввода промокода</p>
+            <p>2. После ввода появится alert() с результатом проверки</p>
+        </div>
+        
+        <div class="examples">
+            <p><strong>Примеры промокодов для тестирования:</strong></p>
+            <ul>
+                <li>скидка</li>
+                <li>Скидка</li>
+                <li>СКИДКА</li>
+                <li>СкиДкА</li>
+                <li>скидка123</li>
+                <li>промокод</li>
+            </ul>
+        </div>
+        
+        <p>Откройте консоль разработчика (F12) для просмотра возможных ошибок.</p>
+    </div>
+
+    <script src="script_10_2.js"></script>
+</body>
+</html>

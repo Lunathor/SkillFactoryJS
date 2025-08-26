@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест возраста с правильными окончаниями</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .info {
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #2196F3;
+        }
+        .current-year {
+            background: #d4edda;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #28a745;
+            font-weight: bold;
+        }
+        .grammar-rules {
+            background: #f8d7da;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Тест возраста с правильными окончаниями</h1>
+        <p>Этот HTML файл загружает ваш JavaScript скрипт для вычисления возраста с правильными окончаниями.</p>
+        
+        <div class="info">
+            <p><strong>Что произойдет:</strong></p>
+            <p>1. Появится окно prompt() для ввода имени</p>
+            <p>2. Появится окно prompt() для ввода года рождения</p>
+            <p>3. После ввода появится alert() с результатом и правильным окончанием</p>
+        </div>
+        
+        <div class="current-year">
+            Текущий год: <span id="year"></span>
+        </div>
+        
+        <div class="grammar-rules">
+            <p><strong>Правила русского языка для слова "год":</strong></p>
+            <ul style="text-align: left; margin: 10px 0;">
+                <li><strong>"год"</strong> - для чисел, заканчивающихся на 1 (но не 11): 1, 21, 31, 41...</li>
+                <li><strong>"года"</strong> - для чисел, заканчивающихся на 2, 3, 4 (но не 12, 13, 14): 2, 3, 4, 22, 23, 24...</li>
+                <li><strong>"лет"</strong> - для всех остальных: 5, 6, 7, 8, 9, 0, 11, 12, 13, 14, 15...</li>
+            </ul>
+        </div>
+        
+    </div>
+
+    <!-- Подключаем ваш JavaScript файл -->
+    <script src="script_10_4.js"></script>
+    
+    <!-- Показываем текущий год -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
