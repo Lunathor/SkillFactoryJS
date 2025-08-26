@@ -1,2 +1,2 @@
 # SkillFactoryJS
-module homework init on module 37
+Module 36 homework
