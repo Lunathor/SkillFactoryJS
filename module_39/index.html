@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея фотографий</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="header__title">Галерея фотографий</h1>
+            <p class="header__subtitle">Загрузите красивые изображения одним кликом</p>
+        </header>
+
+        <main class="main">
+            <div class="controls">
+                <button class="button button--primary" id="loadDogs">
+                    Загрузить собачек
+                </button>
+                <button class="button button--secondary" id="loadCats">
+                    Загрузить котиков
+                </button>
+                <button class="button button--accent" id="loadPhotos">
+                    Загрузить фото
+                </button>
+                <button class="button button--fallback" id="loadFallback">
+                    Случайные изображения
+                </button>
+            </div>
+
+            <div class="loader" id="loader">
+                <div class="loader__spinner"></div>
+                <p class="loader__text">Загружаем изображения...</p>
+            </div>
+
+            <div class="gallery" id="gallery">
+            </div>
+
+            <div class="error" id="error">
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
