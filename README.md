@@ -1,4 +1,4 @@
 # SkillFactoryJS
-Repository for homework 
-Start from module 36
+Module 47 homework Googlebooks API
+
 
