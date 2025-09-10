@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshop - Интернет-магазин книг</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <a href="#" class="logo">
+                        <img src="images/logo.svg" alt="Bookshop" class="logo__image">
+                        <span class="logo__text">Bookshop</span>
+                    </a>
+                </div>
+                
+                <nav class="header__nav">
+                    <ul class="nav">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Каталог</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Новинки</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Популярное</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Акции</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="header__actions">
+                    <button class="btn btn--icon" aria-label="Поиск">
+                        <svg class="btn__icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 21L16.514 16.506L21 21ZM19 10.5C19 15.194 15.194 19 10.5 19C5.806 19 2 15.194 2 10.5C2 5.806 5.806 2 10.5 2C15.194 2 19 5.806 19 10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="btn btn--icon" aria-label="Корзина">
+                        <svg class="btn__icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.7 15.3C4.3 15.7 4.6 16.5 5.1 16.5H17M17 13V17C17 18.1 16.1 19 15 19H9C7.9 19 7 18.1 7 17V13M17 13H7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="btn__badge cart-badge" id="cart-badge">0</span>
+                    </button>
+                    
+                    <button class="btn btn--primary">Войти</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Слайдер -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <div class="slider">
+                        <div class="slider__container">
+                            <div class="slider__track" id="slider-track">
+                                <div class="slider__slide">
+                                    <img src="images/Friday.jpg" alt="Черная пятница" class="slider__image">
+                                </div>
+                                <div class="slider__slide">
+                                    <img src="images/Selections.jpg" alt="Художественная литература" class="slider__image">
+                                </div>
+                                <div class="slider__slide">
+                                    <img src="images/Top.jpg" alt="Black Friday Sale - до 60% скидки" class="slider__image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__dots">
+                            <button class="slider__dot slider__dot--active" data-slide="0" aria-label="Перейти к слайду 1"></button>
+                            <button class="slider__dot" data-slide="1" aria-label="Перейти к слайду 2"></button>
+                            <button class="slider__dot" data-slide="2" aria-label="Перейти к слайду 3"></button>
+                        </div>
+                    </div>
+                    
+                    <div class="hero__blocks">
+                        <a href="#" class="hero__block hero__block--blue">
+                            <h3 class="hero__block-title">Бесплатная доставка</h3>
+                            <p class="hero__block-text">При заказе от 2000₽</p>
+                        </a>
+                        <a href="#" class="hero__block hero__block--green">
+                            <h3 class="hero__block-title">Скидки до 50%</h3>
+                            <p class="hero__block-text">На все книги</p>
+                        </a>
+                        <a href="#" class="hero__block hero__block--orange">
+                            <h3 class="hero__block-title">Новинки</h3>
+                            <p class="hero__block-text">Свежие поступления</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Основной контент -->
+        <section class="content">
+            <div class="container">
+                <div class="content__wrapper">
+                    <!-- Категории -->
+                    <aside class="sidebar">
+                        <h2 class="sidebar__title">Категории</h2>
+                        <nav class="categories">
+                            <ul class="categories__list" id="categories-list">
+                                <li class="categories__item">
+                                    <button class="categories__button categories__button--active" data-category="programming">
+                                        Программирование
+                                    </button>
+                                </li>
+                                <li class="categories__item">
+                                    <button class="categories__button" data-category="fiction">
+                                        Художественная литература
+                                    </button>
+                                </li>
+                                <li class="categories__item">
+                                    <button class="categories__button" data-category="science">
+                                        Научная литература
+                                    </button>
+                                </li>
+                                <li class="categories__item">
+                                    <button class="categories__button" data-category="business">
+                                        Бизнес
+                                    </button>
+                                </li>
+                                <li class="categories__item">
+                                    <button class="categories__button" data-category="history">
+                                        История
+                                    </button>
+                                </li>
+                                <li class="categories__item">
+                                    <button class="categories__button" data-category="art">
+                                        Искусство
+                                    </button>
+                                </li>
+                            </ul>
+                        </nav>
+                    </aside>
+
+                    <!-- Книги -->
+                    <div class="books">
+                        <div class="books__header">
+                            <h2 class="books__title">Книги</h2>
+                            <div class="books__loading books__loading--hidden" id="books-loading">
+                                <div class="spinner"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="books__grid" id="books-grid">
+                            <!-- Книги будут загружены динамически -->
+                        </div>
+                        
+                        <div class="books__load-more">
+                            <button class="btn btn--secondary btn--hidden" id="load-more-btn">
+                                Загрузить еще
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Модальное окно карточки книги -->
+    <div class="modal" id="book-modal">
+        <div class="modal__overlay" id="modal-overlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" id="modal-close" aria-label="Закрыть">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div class="book-detail" id="book-detail">
+                <!-- Контент будет загружен динамически -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"></script>
+</body>
+</html>
