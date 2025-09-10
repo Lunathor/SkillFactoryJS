@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = (env, argv) => {
   const isProduction = argv.mode === 'production';
@@ -52,6 +53,11 @@ module.exports = (env, argv) => {
       ],
     },
     plugins: [
+      new Dotenv({
+        safe: false, // don't require .env.example
+        allowEmptyValues: true, // allow empty variables
+        systemvars: true, // load system environment variables
+      }),
       new HtmlWebpackPlugin({
         template: './src/index.html',
         filename: 'index.html',
